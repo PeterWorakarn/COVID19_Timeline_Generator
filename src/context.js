@@ -8,8 +8,8 @@ export const AppProvider = ({ children }) => {
 
     // set selected
     const selected = [
-        { label: 'ผู้ชาย', value: 'male' },
-        { label: 'ผู้หญิง', value: 'female' },
+        { label: 'ชาย', value: 'male' },
+        { label: 'หญิง', value: 'female' },
         { label: 'ไม่ระบุ', value: 'unknow' }
     ]
     // State management
@@ -28,7 +28,7 @@ export const AppProvider = ({ children }) => {
         { id: "1624331130177", datetime: "2021-07-22T14:00", cat: "2021-07-22T00:00", message: "อ่านหนังสือ ที่ศูนย์การเรียนรู้" },
     ])
 
-    const [categories, setCategories] = useState(["2021-01-20T00:00","2021-06-22T00:00","2021-04-22T00:00","2021-07-22T00:00"])
+    const [categories, setCategories] = useState(["2021-01-20T00:00", "2021-06-22T00:00", "2021-04-22T00:00", "2021-07-22T00:00"])
 
     const removeTimeline = (id) => {
         const updateTimeline = timeline.filter((each) => each.id !== id)
@@ -38,16 +38,33 @@ export const AppProvider = ({ children }) => {
     }
 
     const formHandler = (data) => {
-        const dataTimeline = { id: new Date().getTime().toString(), datetime:data.datetime, cat:`${data.datetime.substring(0, 10)}T00:00`, message: data.message}        
+        const dataTimeline = { id: new Date().getTime().toString(), datetime: data.datetime, cat: `${data.datetime.substring(0, 10)}T00:00`, message: data.message }
         const newCategories = `${data.datetime.substring(0, 10)}T00:00`;
-        
+
         setCategories(Array.from(new Set([...categories, newCategories])))
         setTimeline([...timeline, dataTimeline]);
         reset({ datetime: '', message: '' });
     }
 
+    const value = {
+        job, 
+        setJob, 
+        age, 
+        setAge, 
+        gender, 
+        setGender, 
+        timeline, 
+        categories, 
+        removeTimeline, 
+        selected, 
+        register, 
+        handleSubmit, 
+        formHandler, 
+        formState: { errors }
+    }
+
     return (
-        <AppContext.Provider value={{ job, setJob, age, setAge, gender, setGender, timeline, categories, removeTimeline, selected, register, handleSubmit, formHandler, formState: { errors } }}>{children}</AppContext.Provider>
+        <AppContext.Provider value={value}>{children}</AppContext.Provider>
     );
 };
 

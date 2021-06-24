@@ -1,0 +1,16 @@
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,.2);
+    border: 1 solid #fff;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.bg-test {
+    background-image: url('https://luanedcosta.github.io/react-tailwindcss-glassmorphism/static/media/Background.d63a681d.jpg');
+}
