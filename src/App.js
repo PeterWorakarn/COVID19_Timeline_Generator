@@ -10,7 +10,7 @@ function App() {
   return (
     <AppProvider>
       <div className="min-w-full min-h-full bg-test bg-center bg-no-repeat bg-cover">
-        <div className="container sm:mx-auto max-w-5xl font-fontMain pt-24">
+        <div className="md:container mx-auto max-w-sm md:max-w-3xl font-fontMain pt-24">
           <Header />
             <main className="container mx-auto flex flex-col md:flex-row">
               <Form />

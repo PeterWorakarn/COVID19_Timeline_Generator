@@ -8,13 +8,13 @@ export default function Form() {
     const { job, setJob, age, setAge, register, handleSubmit, formHandler, formState: { errors } } = useGlobalContext();
 
     return (
-        <div className="bg-opacity-40 backdrop-filter backdrop-blur-lg w-full md:w-2/5 px-4 py-5 bg-white space-y-6 sm:p-6 rounded-none md:rounded-tl-xl md:rounded-bl-xl">
+        <div className="bg-opacity-40 backdrop-filter backdrop-blur-lg w-full md:w-2/5 px-4 py-5 bg-white space-y-6 sm:p-6 rounded-xl md:rounded-tl-xl md:rounded-tr-none md:rounded-bl-xl md:rounded-br-none mb-5 md:mb-0">
             <section>
                 <h2 className="main__heading">ข้อมูลผู้ป่วย</h2>
                 <div class="h-1 w-20 bg-indigo-500 rounded mb-5"></div>
                 
                 <h3>ข้อมูลส่วนตัว</h3>
-                <div className="flex gap-2">
+                <div className="flex gap-3">
                     <div className="relative mb-4 w-1/2">
                         <label htmlFor="gender" className="form__label">เพศ</label>
                         <div className="w-full">

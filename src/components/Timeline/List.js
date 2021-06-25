@@ -34,7 +34,7 @@ export default function List() {
                                                         <DayJS element="p" format="HH:mm" className="leading-relaxed max-w-md">{new Date(eachTime.datetime)} </DayJS>
                                                         <p className="leading-relaxed w-full">{eachTime.message}</p>
                                                     </div>
-                                                    <HiOutlineX className="mt-1 font-bold text-brand-dark" onClick={() => removeTimeline(eachTime.id)} />
+                                                    <HiOutlineX className="mt-1 font-bold text-brand-dark cursor-pointer pointer-events-auto" onClick={() => removeTimeline(eachTime.id)} />
                                                 </article>
                                             )
                                         })
