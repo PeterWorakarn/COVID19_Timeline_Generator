@@ -8,10 +8,10 @@ export default function Form() {
     const { job, setJob, age, setAge, register, handleSubmit, formHandler, formState: { errors } } = useGlobalContext();
 
     return (
-        <div className="bg-opacity-40 backdrop-filter backdrop-blur-lg w-full md:w-2/5 px-4 py-5 bg-white space-y-6 sm:p-6 rounded-xl md:rounded-tl-xl md:rounded-tr-none md:rounded-bl-xl md:rounded-br-none mb-5 md:mb-0">
+        <div className="bg-brand-white bg-opacity-80 backdrop-filter backdrop-blur-lg w-full md:w-2/5 px-4 py-5 space-y-6 sm:p-6 rounded-xl md:rounded-tl-xl md:rounded-tr-none md:rounded-bl-xl md:rounded-br-none mb-5 md:mb-0">
             <section>
                 <h2 className="main__heading">ข้อมูลผู้ป่วย</h2>
-                <div class="h-1 w-20 bg-indigo-500 rounded mb-5"></div>
+                <div class="h-1 w-28 bg-brand rounded mb-5"></div>
                 
                 <h3>ข้อมูลส่วนตัว</h3>
                 <div className="flex gap-3">
@@ -38,14 +38,14 @@ export default function Form() {
                     <div className="relative mb-4 w-full">
                         <div className="flex flex-row justify-between">
                             <label htmlFor="datetime" className="form__label">วันเวลา</label>
-                            {errors.datetime && <HiExclamation className="w-5 h-5 text-yellow-500" title="กรุณากรอกวันเวลา" />}
+                            {errors.datetime && <HiExclamation className="w-5 h-5 text-brand-yellow" title="กรุณากรอกวันเวลา" />}
                         </div>
                         <input {...register("datetime", { required: true })} type="datetime-local" id="datetime" name="datetime" className="form__field" />
                     </div>
                     <div className="relative mb-4 w-full">
                         <div className="flex flex-row justify-between">
                             <label htmlFor="message" className="form__label">รายละเอียด</label>
-                            {errors.message && <HiExclamation className="w-5 h-5 text-yellow-500" title="กรุณากรอกรายละเอียด" />}
+                            {errors.message && <HiExclamation className="w-5 h-5 text-brand-yellow" title="กรุณากรอกรายละเอียด" />}
                         </div>
                         <textarea {...register("message", { required: true })}
                             id="message"
