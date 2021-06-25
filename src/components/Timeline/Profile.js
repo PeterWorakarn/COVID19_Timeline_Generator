@@ -26,7 +26,6 @@ export default function Profile() {
             if (age >= 30) { return Female3 }
             if (age < 30) { return Female1 }
         }
-
         return Unknow0
     }
 

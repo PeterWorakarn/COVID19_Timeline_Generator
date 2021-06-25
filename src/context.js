@@ -13,7 +13,7 @@ export const AppProvider = ({ children }) => {
         { label: 'ไม่ระบุ', value: 'unknow' }
     ]
     // State management
-    const [gender, setGender] = useState(selected[2])
+    const [gender, setGender] = useState(selected[0])
     const [age, setAge] = useState('25');
     const [job, setJob] = useState('Full Stack Developer');
 
