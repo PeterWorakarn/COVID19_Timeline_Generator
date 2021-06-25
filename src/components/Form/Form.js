@@ -8,7 +8,7 @@ export default function Form() {
     const { job, setJob, age, setAge, register, handleSubmit, formHandler, formState: { errors } } = useGlobalContext();
 
     return (
-        <div className="bg-brand-white bg-opacity-80 backdrop-filter backdrop-blur-lg w-full md:w-2/5 px-4 py-5 space-y-6 sm:p-6 rounded-xl md:rounded-tl-xl md:rounded-tr-none md:rounded-bl-xl md:rounded-br-none mb-5 md:mb-0">
+        <div className="z-10 bg-brand-white bg-opacity-80 backdrop-filter backdrop-blur-lg w-full md:w-2/5 px-4 py-5 space-y-6 sm:p-6 rounded-xl md:rounded-tl-xl md:rounded-tr-none md:rounded-bl-xl md:rounded-br-none mb-5 md:mb-0">
             <section>
                 <h2 className="main__heading">ข้อมูลผู้ป่วย</h2>
                 <div class="h-1 w-28 bg-brand rounded mb-5"></div>
