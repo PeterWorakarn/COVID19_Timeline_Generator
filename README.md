@@ -1,5 +1,5 @@
 # 🏥 COVID19 Timeline Generator
-![Banner](https://raw.githubusercontent.com/PeterWorakarn/COVID19-API/main/Slide%20%E2%80%93%20COVID19%403x.png)
+![Banner](https://raw.githubusercontent.com/PeterWorakarn/COVID19_Timeline_Generator/main/Slide%20%E2%80%93%20COVID-19%20Timeline%403x.png)
 COVID19 Timeline Generator เครื่องมือสร้างไทม์ไลน์ COVID19 
 
 ## Feature
