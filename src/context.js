@@ -13,22 +13,15 @@ export const AppProvider = ({ children }) => {
         { label: 'ไม่ระบุ', value: 'unknow' }
     ]
     // State management
-    const [gender, setGender] = useState(selected[0])
+    const [gender, setGender] = useState(selected[2])
     const [age, setAge] = useState('25');
-    const [job, setJob] = useState('Full Stack Developer');
+    const [job, setJob] = useState('');
 
     // manage timeline data
-    const [timeline, setTimeline] = useState([
-        { id: "1624331052200", datetime: "2021-01-20T10:02", cat: "2021-01-20T00:00", message: "ออกไปซื้ออาหารที่ 7-11" },
-        { id: "1624331052204", datetime: "2021-06-22T10:02", cat: "2021-06-22T00:00", message: "พักอยู่ในหอพัก แถวมหาวิทยาลัย" },
-        { id: "1624331130195", datetime: "2021-06-22T12:00", cat: "2021-06-22T00:00", message: "พักอยู่ในหอพัก แถวมหาวิทยาลัย" },
-        { id: "1624331130196", datetime: "2021-06-22T14:00", cat: "2021-06-22T00:00", message: "อ่านหนังสือ ที่ศูนย์การเรียนรู้" },
-        { id: "1624331130192", datetime: "2021-06-22T11:00", cat: "2021-06-22T00:00", message: "อ่านหนังสือ ที่บ้าน" },
-        { id: "1624331130188", datetime: "2021-04-22T14:00", cat: "2021-04-22T00:00", message: "อ่านหนังสือ ที่ศูนย์การเรียนรู้" },
-        { id: "1624331130177", datetime: "2021-07-22T14:00", cat: "2021-07-22T00:00", message: "อ่านหนังสือ ที่ศูนย์การเรียนรู้" },
-    ])
+    const [timeline, setTimeline] = useState([])	
 
-    const [categories, setCategories] = useState(["2021-01-20T00:00", "2021-06-22T00:00", "2021-04-22T00:00", "2021-07-22T00:00"])
+
+    const [categories, setCategories] = useState([])
 
     const removeTimeline = (id) => {
         const updateTimeline = timeline.filter((each) => each.id !== id)
